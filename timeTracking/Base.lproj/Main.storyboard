@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Timer View Controller-->
+        <scene sceneID="C0g-QN-hpP">
+            <objects>
+                <viewController id="NLJ-fu-A98" customClass="NSTimerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dCv-nb-3Li"/>
+                        <viewControllerLayoutGuide type="bottom" id="6Wc-tb-XsC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Co3-G0-8Ys">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Timer Is Running" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ulq-OR-8m9">
+                                <rect key="frame" x="96" y="262" width="129" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5iC-y9-TMf">
+                                <rect key="frame" x="114" y="414" width="100" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back To Home"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="rMa-cO-Qf1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5RJ-T9-HuK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="877.5" y="600"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6T-ut-pNg">
+                                <rect key="frame" x="29" y="289" width="60" height="30"/>
+                                <state key="normal" title="NSTimer"/>
+                                <connections>
+                                    <segue destination="NLJ-fu-A98" kind="show" id="Tl5-kY-Zyf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="V/S" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJK-TD-W5y">
+                                <rect key="frame" x="138" y="277" width="44" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="MDo-kQ-fRK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TX9-ff-lTR">
+                                <rect key="frame" x="233" y="289" width="53" height="30"/>
+                                <state key="normal" title="NSDate"/>
+                                <connections>
+                                    <segue destination="6eZ-AC-Fnk" kind="show" id="BKK-HC-EDg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oJK-TD-W5y" firstAttribute="centerY" secondItem="TX9-ff-lTR" secondAttribute="centerY" id="5VZ-Fr-v0V"/>
+                            <constraint firstItem="oJK-TD-W5y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Axh-dV-4sA"/>
+                            <constraint firstItem="M6T-ut-pNg" firstAttribute="baseline" secondItem="TX9-ff-lTR" secondAttribute="firstBaseline" id="H1i-P8-Ph5"/>
+                            <constraint firstItem="TX9-ff-lTR" firstAttribute="baseline" secondItem="M6T-ut-pNg" secondAttribute="firstBaseline" id="HeU-eu-i3c"/>
+                            <constraint firstItem="oJK-TD-W5y" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="257" id="TBE-og-b3V"/>
+                            <constraint firstItem="TX9-ff-lTR" firstAttribute="leading" secondItem="oJK-TD-W5y" secondAttribute="trailing" constant="51" id="Wyx-gB-wfO"/>
+                            <constraint firstItem="M6T-ut-pNg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="269" id="qEY-QL-eQ8"/>
+                            <constraint firstItem="oJK-TD-W5y" firstAttribute="leading" secondItem="M6T-ut-pNg" secondAttribute="trailing" constant="49" id="rA7-g0-QX1"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="135"/>
+        </scene>
+        <!--Date View Controller-->
+        <scene sceneID="d90-fr-z0k">
+            <objects>
+                <viewController id="6eZ-AC-Fnk" customClass="NSDateViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="I8p-Ug-Chd"/>
+                        <viewControllerLayoutGuide type="bottom" id="jZj-HZ-2ew"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CXY-k7-oKl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NSDate Is Running" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8TI-eL-Wka">
+                                <rect key="frame" x="89" y="262" width="143" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r7p-my-QYb">
+                                <rect key="frame" x="110" y="368" width="100" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back To Home"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="DhF-5k-QSk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V4n-FX-I7Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="878" y="-58"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="DhF-5k-QSk"/>
+    </inferredMetricsTieBreakers>
+</document>
